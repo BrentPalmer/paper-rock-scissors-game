@@ -1,18 +1,9 @@
-def calculation(comp_choice)
-  comp_choice = Random.new
-  comp_choice = comp_choice.rand(1..3)
-
-  if comp_choice == 1
-    comp_choice = "P"
-  elsif comp_choice == 2
-    comp_choice = "R"
-  else comp_choice == 3
-    comp_choice = "S"
-  end
-end
+#def calculate(comp_choice)
+# com_choice = 
+#end
 
 
-def competition(user,comp)
+def compete(user,comp)
 
   if user == "P" && comp == "P"
     puts "You picked paper and computer picked paper"
@@ -43,13 +34,19 @@ def competition(user,comp)
     puts "It's a tie"
   else
     puts "ERR: Wrong Input!"
-    puts "Choose one: (P | R | S)"
-    choice = gets.chomp
-    choice = choice.upcase
-    comp_choice = calculation(comp_choice)
-    competition(choice,comp_choice)
+    err_check
   end
         
+end
+
+def err_check
+  puts "Choose one: (P | R | S)"
+  choice = gets.chomp
+  choice = choice.upcase
+  
+  comp_choice = ["P", "R", "S"].sample
+  
+  compete(choice,comp_choice)
 end
 
 
@@ -92,9 +89,9 @@ begin
   choice = gets.chomp
   choice = choice.upcase
   
-  comp_choice = calculation(comp_choice)
+  comp_choice = ["P", "R", "S"].sample
   
-  competition(choice,comp_choice)
+  compete(choice,comp_choice)
 
   puts "-------------------------"
   puts "play again? (Y/N)"
