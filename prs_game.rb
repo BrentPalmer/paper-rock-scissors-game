@@ -1,8 +1,3 @@
-#def calculate(comp_choice)
-# com_choice = 
-#end
-
-
 def compete(user,comp)
 
   if user == "P" && comp == "P"
@@ -35,17 +30,14 @@ def compete(user,comp)
   else
     puts "ERR: Wrong Input!"
     err_check
-  end
-        
+  end        
 end
 
 def err_check
   puts "Choose one: (P | R | S)"
   choice = gets.chomp
   choice = choice.upcase
-  
   comp_choice = ["P", "R", "S"].sample
-  
   compete(choice,comp_choice)
 end
 
@@ -85,6 +77,7 @@ puts "-----------------------------------------------"
 puts "Play Paper_Rock_Scissors!"
 
 begin
+  
   puts "Choose one: (P | R | S)"
   choice = gets.chomp
   choice = choice.upcase
