@@ -12,9 +12,6 @@ def calculation(comp_choice)
 end
 
 
-
-
-
 def competition(user,comp)
 
   if user == "P" && comp == "P"
@@ -54,6 +51,7 @@ def competition(user,comp)
   end
         
 end
+
 
 puts " _______ _______ _______ _______ _______   
 (  ____ (  ___  (  ____ (  ____ (  ____ )  ( )
